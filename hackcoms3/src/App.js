@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import './App.css';
+import FormComponent from './routes/Form';
+import Complete from './routes/Complete';
 
 function Modal({ message, onClose }) {
   return (
@@ -62,6 +64,7 @@ function LoadingScreen() {
     </div>
   );
 }
+
 
 
 function FormComponent() {
@@ -264,6 +267,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/form" element={<FormComponent />} />
+        <Route path="/complete"element={<Complete />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
