@@ -52,6 +52,17 @@ function Home() {
     </div>
   );
 }
+function LoadingScreen() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-100 to-gray-300">
+      <div className="text-center">
+        <div className="spinner-border animate-spin inline-block w-12 h-12 border-4 border-t-gray-800 border-gray-300 rounded-full mb-4"></div>
+        <h2 className="text-2xl font-semibold text-gray-800">Loading... Please wait</h2>
+      </div>
+    </div>
+  );
+}
+
 
 function FormComponent() {
   const [step, setStep] = useState(1);
@@ -65,6 +76,7 @@ function FormComponent() {
   const [courseInput, setCourseInput] = useState('');
   const [modalMessage, setModalMessage] = useState('');
   const [showModal, setShowModal] = useState(false);
+  const [loading, setLoading] = useState(false); // New loading state
 
   const navigate = useNavigate();
 
@@ -111,14 +123,21 @@ function FormComponent() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form Data:', formData);
-    navigate('/dashboard');
+    setLoading(true); // Show loading screen
+    setTimeout(() => {
+      navigate('/dashboard'); // Navigate to the Dashboard after a delay
+    }, 3000); // Simulate a 3-second delay for loading
   };
+
+  if (loading) {
+    return <LoadingScreen />; // Render the loading screen if loading state is true
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-100 to-gray-300 p-6">
       <div className="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-xl w-full max-w-lg">
         {showModal && <Modal message={modalMessage} onClose={() => setShowModal(false)} />}
-        
+
         {step === 1 && (
           <div>
             <h2 className="text-3xl font-semibold mb-6 text-gray-800">Step 1: Find Your School</h2>
@@ -252,3 +271,4 @@ function App() {
 }
 
 export default App;
+
