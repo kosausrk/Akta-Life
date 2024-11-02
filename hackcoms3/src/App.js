@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
 import './App.css';
-import FormComponent from './routes/Form';
 import Complete from './routes/Complete';
 
 function Modal({ message, onClose }) {
@@ -128,7 +127,7 @@ function FormComponent() {
     console.log('Form Data:', formData);
     setLoading(true); // Show loading screen
     setTimeout(() => {
-      navigate('/dashboard'); // Navigate to the Dashboard after a delay
+      navigate('/dashboard', {state: {id: formData.school, studentData: formData}}); // Navigate to the Dashboard after a delay
     }, 3000); // Simulate a 3-second delay for loading
   };
 
@@ -232,8 +231,13 @@ function FormComponent() {
 }
 
 function Dashboard() {
+
+  const location = useLocation();
+
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-300 p-6">
+      {console.log(location.studentData)}
       <div className="container mx-auto bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-xl max-w-4xl">
         <h2 className="text-4xl font-semibold mb-6 text-gray-800">Dashboard</h2>
         
