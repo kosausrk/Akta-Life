@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Box from "../utils/box";
 import InstitutionForm from "./InstitutionForm";
 import UserProfile from "./UserProfileForm";
-import { useNavigate } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 
 export default function Welcome() {
 
@@ -10,21 +10,20 @@ export default function Welcome() {
     const [getStudentInstitution, setStudentInstitution] = useState('')
     const [getYear, setYear] = useState('')
     const [getMajor, setMajor] = useState('')
+    const [getCourses, setCourses] = useState([])
     const [getInterests, setInterests] = useState('')
     const navigate = useNavigate()
     
     const handleCarouselClick = (e) => {
         if (getProgress === 3) {
             // navigate to the dashboard here with the user data
-            
-            navigate('/dashboard', { 
-                state: {
-                    institution: getStudentInstitution,
-                    year: getYear,
-                    major: getMajor,
-                    bio: getInterests
-                }}
-            )
+            const res = {
+                year: getYear,
+                major: getMajor,
+                courses: getCourses,
+                bio: getInterests
+            }
+            navigate(`/dashboard/${JSON.stringify(res)}`)
         }
         setProgress(getProgress + 1)
     }
@@ -49,6 +48,8 @@ export default function Welcome() {
             return <UserProfile 
                 setYear={setYear}
                 setMajor={setMajor}
+                setCourses={setCourses}
+                getCourses={getCourses}
                 setInterests={setInterests}
             />
         }
@@ -61,6 +62,7 @@ export default function Welcome() {
                     <h1 className="text-xl text-black">Confirmation</h1>
                     <div><p className="text-bold text-lg"><b>Major: </b>{getMajor}</p></div>
                     <div><p className="text-bold text-lg"><b>Year: </b>{getYear}</p></div>
+                    <div><p className="text-bold text-lg"><b>Current Coursework: </b></p>{getCourses.map((course) => <li>{course}</li>)}</div>
                     <div><p className="text-bold text-lg"><b>Bio: </b>{getInterests}</p></div>
                 </div>
             )
@@ -87,7 +89,7 @@ export default function Welcome() {
                 </div>
                 <div className="flex place-content-center pt-4">
                         <a href={"#" + getProgress} onClick={handleCarouselClick}>
-                            <button className="btn btn-primary">
+                            <button className="btn btn-accent text-white">
                                 Continue
                             </button>
                         </a>
