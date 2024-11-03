@@ -1,6 +1,6 @@
 import { useParams, useLocation } from 'react-router-dom';
 import data from '../professors_data.json';
-
+import Box from '../utils/box';
 export default function Course() {
     const { courseName } = useParams(); // Get the course name from the URL
     const location = useLocation(); // Get the state passed from the Pathway component
@@ -21,21 +21,20 @@ export default function Course() {
         }
     }
     
-    
     return (
-        <div>
-            <h1>Course Details</h1>
-            <p>Course Name: {courseName}</p>
-            {courseDetails && (
-                <p>Professor: {courseDetails.professor}</p>
-                
-            )}
-
-            <p>Professor Rating: {getRatingsByName(courseDetails.professor)}</p>
-    
-
-
-        </div>
-
+        <Box prop={
+            <div>
+                <h1>Course Details</h1>
+                <p>Course Name: {courseName}</p>
+                {courseDetails ? (
+                    <>
+                        <p>Professor: {courseDetails.professor}</p>
+                        <div>Professor Rating: {getRatingsByName(courseDetails.professor)}</div>
+                    </>
+                ) : (
+                    <p>Course details are not available.</p>
+                )}
+            </div>
+        } />
     );
-};
+}
