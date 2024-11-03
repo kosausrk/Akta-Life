@@ -1,14 +1,26 @@
 import { useLocation, useParams } from "react-router-dom";
 import Box from "../utils/box";
+import Query from "../utils/ai";
+import { useEffect, useState } from "react";
 
 
 export default function Dashboard() {
 
-    const { student } = useParams();
+    const { student } = useParams('');
+    const [getValue, setValue] = useState('')
 
     const studentMsg = () => {
         return JSON.parse(atob(student))
     }
+
+
+    useEffect(() => {
+        Query({
+        major: studentMsg().major,
+        courses: studentMsg().courses,
+        grade: studentMsg().year,
+        interests: [studentMsg().bio]
+        }).then((value) => setValue(value))}, [])
 
     return <>
         <Box prop={
@@ -34,6 +46,7 @@ export default function Dashboard() {
                     <h1 className="text-lg text-stone-800"><b>Your Reccomended Courses</b></h1>
                 </div>
 
+                {getValue}
 
 
             </div>
