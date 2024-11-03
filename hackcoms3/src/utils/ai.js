@@ -3,7 +3,6 @@ import courseData from './cleaned_course_data.json';
 import professorData from './professors_data.json';
 import requiredCourses from './CSRequiredCourses.json';
 
-console.log('API Key:', process.env.REACT_APP_API_KEY);
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
