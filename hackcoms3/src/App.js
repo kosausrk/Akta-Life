@@ -29,7 +29,7 @@ function Home() {
           </p>
         </div>
         <Link
-          to="/form"
+          to="/welcome"
           className="px-10 py-4 text-3xl font-semibold bg-gradient-to-r from-gray-800 to-gray-700 text-white rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
         >
           BEGIN
