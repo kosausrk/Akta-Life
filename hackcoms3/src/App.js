@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import './App.css';
-import Complete from './routes/Complete';
-import FormComponent from './routes/Form';
+import Dashboard from './routes/Dashboard';
+import Welcome from './routes/Welcome';
 
 
 function Home() {
@@ -13,14 +13,9 @@ function Home() {
         <div className="container mx-auto flex justify-between items-center px-6">
           <div className="text-3xl font-semibold text-white tracking-wider">AKTA</div>
           <div>
-<<<<<<< HEAD
             <Link to="/" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">Home</Link>
             <Link to="/AIPage" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">AI Test</Link>
             <Link to="/form" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">Form</Link>
-=======
-            {/* <Link to="/" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">Home</Link>
-            <Link to="/form" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">Form</Link> */}
->>>>>>> 289390f (Dashboard Improvements)
           </div>
         </div>
       </nav>
@@ -50,9 +45,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/form" element={<FormComponent />} />
-        <Route path="/complete"element={<Complete />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard:student" element={<Dashboard />} />
+        <Route path="/welcome" element={<Welcome />} />
       </Routes>
     </Router>
   );
