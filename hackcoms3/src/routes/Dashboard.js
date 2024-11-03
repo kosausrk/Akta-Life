@@ -1,6 +1,7 @@
 import { useLocation, useParams } from "react-router-dom";
 import Box from "../utils/box";
 
+
 export default function Dashboard() {
 
     const { student } = useParams();
@@ -12,7 +13,7 @@ export default function Dashboard() {
     return <>
         <Box prop={
             <div>
-                <h1 className="text-lg text-stone-800"><b>Your Current Courses</b></h1>
+                <h1 className="text-lg text-stone-800"><b>Completed Coursework</b></h1>
                 <div className="flex justify-center">
                     <div>
                     {studentMsg().courses.map((course) => {
@@ -32,7 +33,7 @@ export default function Dashboard() {
                 <div>
                     <h1 className="text-lg text-stone-800"><b>Your Reccomended Courses</b></h1>
                 </div>
-                
+
 
 
             </div>

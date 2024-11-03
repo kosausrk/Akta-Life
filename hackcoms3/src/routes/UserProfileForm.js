@@ -61,7 +61,7 @@ export default function UserProfile({setYear, setMajor, setInterests, getCourses
             <div className="p-2"></div>
             <hr></hr>
             <div className="pt-2">
-                <h1 className="text-stone-800">Current Coursework</h1>
+                <h1 className="text-stone-800">Completed Coursework</h1>
                 {renderCourses()}
             </div>
             <div>
