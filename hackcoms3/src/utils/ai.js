@@ -31,7 +31,7 @@ export default async function Query(userInput) {
       
       Instructions:
       1. Identify the required courses for the user's year and major.
-      2. Display these required courses the user needs to take next and check that you dont put courses that the user has already taken by looking at the user input, sorted in descending order by the professor's rating. Format: "[Course Code] - Professor: [Name] - Rating: [Rating]".
+      2. Display these required courses the user needs to take next and check that you dont put courses that the user has already taken by looking at the user input, sorted in descending order by the professor's rating. Format: "[Course Code] - Professor: [Name]".
       3. Identify additional recommended courses based on the user's interests and major. Display them in a similar format.
       
       Return the recommended and required courses lists, formatted as specified like this for example:

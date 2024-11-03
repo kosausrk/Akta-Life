@@ -6,6 +6,7 @@ import Welcome from './routes/Welcome';
 import Pathway from './routes/Pathway';
 import Course from './routes/Course';
 import AIComponent from './utils/AIComponent';
+import Query from './utils/ai.js';
 
 
 function Home() {
