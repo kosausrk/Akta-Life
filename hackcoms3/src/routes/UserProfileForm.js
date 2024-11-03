@@ -30,6 +30,7 @@ export default function UserProfile({setYear, setMajor, setInterests, getCourses
                     Tell us about yourself
                 </div>
             </div>
+            <p className="text-black">Year</p>
             <div>
                 <select 
                     className="select select-bordered w-full max-w-xs"
@@ -45,6 +46,7 @@ export default function UserProfile({setYear, setMajor, setInterests, getCourses
                 </select>
             </div>
             <div className="p-4"></div>
+            <p className="text-black">Major</p>
             <div>
                 <select 
                     className="select select-bordered w-full max-w-xs"
@@ -59,14 +61,14 @@ export default function UserProfile({setYear, setMajor, setInterests, getCourses
             <div className="p-2"></div>
             <hr></hr>
             <div className="pt-2">
-                <h1 className="text-xl text-stone-800">Current Coursework</h1>
+                <h1 className="text-stone-800">Current Coursework</h1>
                 {renderCourses()}
             </div>
             <div>
                 <input 
                 type="text" 
                 placeholder="Enter a Course (e.g. CSCI-141)" 
-                className="input input-bordered w-full"
+                className="input text-white input-bordered w-full"
                 onChange={(e) => setCurrentCourseEntry(e.target.value)}
                 ></input>
             </div>
@@ -85,7 +87,7 @@ export default function UserProfile({setYear, setMajor, setInterests, getCourses
             <div>
                 <h1 className="text-xl text-stone-800">More Interests</h1>
                 <textarea 
-                className="textarea textarea-primary w-full max-w-xs" 
+                className="textarea text-white  w-full max-w-xs" 
                 placeholder="Start Typing"
                 onChange={(e) => setInterests(e.target.value)}
                 >

@@ -59,7 +59,7 @@ export default function Welcome() {
         if (getProgress === 3) {
             return (
                 <div className="text-stone-800">
-                    <h1 className="text-xl text-black">Confirmation</h1>
+                    <h1 className="text-xl text-black"><u>Confirmation</u></h1>
                     <div><p className="text-bold text-lg"><b>Major: </b>{getMajor}</p></div>
                     <div><p className="text-bold text-lg"><b>Year: </b>{getYear}</p></div>
                     <div><p className="text-bold text-lg"><b>Current Coursework: </b></p>{getCourses.map((course) => <li>{course}</li>)}</div>

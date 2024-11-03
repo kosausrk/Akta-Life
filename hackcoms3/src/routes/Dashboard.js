@@ -32,6 +32,7 @@ export default function Dashboard() {
                 <div>
                     <h1 className="text-lg text-stone-800"><b>Your Reccomended Courses</b></h1>
                 </div>
+                
 
 
             </div>

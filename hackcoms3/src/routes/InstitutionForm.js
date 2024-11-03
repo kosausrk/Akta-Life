@@ -25,11 +25,11 @@ export default function InstitutionForm({getStudentInstitution, setStudentInstit
                 <div className="label">
                     <span className="label-text text-xl text-black">Find your Institution</span>
                 </div>
-                <div className="text-xl text-slate-500">{getStudentInstitution}</div>
+                <div className="text-xl pb-2 text-black"><b>{getStudentInstitution}</b></div>
                 <input
                     type="text"
                     placeholder="Search University"
-                    className="input input-bordered  w-full max-w-x"
+                    className="input input-bordered text-white w-full max-w-x"
                     id="institution-field"
                     value={getInstitution}
                     onChange={(e) => {
@@ -42,7 +42,7 @@ export default function InstitutionForm({getStudentInstitution, setStudentInstit
                             <div className="pt-2">
                                 <button 
                                 key={Math.random()}
-                                className="btn btn-neutral btn-sm p-1"
+                                className="btn btn-neutral text-white btn-sm p-1"
                                 value={u}
                                 onClick={(e) => {
                                     setStudentInstitution(e.target.value)
