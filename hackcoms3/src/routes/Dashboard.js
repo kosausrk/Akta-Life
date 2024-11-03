@@ -1,23 +1,26 @@
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Box from "../utils/box";
 
-/*
-    school: '',
-    grade: '',
-    major: '',
-    interests: '',
-    courses: [],
-*/
-
 export default function Dashboard() {
+    /*
+    :student {
+        year: str
+        major: str
+        courses: [str]
+        bio: str
+    }
+    */
 
-    const location = useLocation();
+    let { student } = useParams();
+
+    const studentUser = () => {
+        return JSON.parse(student)
+    }
   
     return <>
         <Box prop={
             <div>
-                {location.state.studentData.school}
-                {location.state.studentData.courses}
+                {JSON.stringify(studentUser())}
             </div>
         } />
     </>

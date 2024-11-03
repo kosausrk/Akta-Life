@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import './App.css';
-import FormComponent from './routes/Form';
 import Dashboard from './routes/Dashboard';
 import Welcome from './routes/Welcome';
 import Pathway from './routes/Pathway';
@@ -19,6 +18,7 @@ function Home() {
           <div className="text-3xl font-semibold text-white tracking-wider">AKTA</div>
           <div>
             <Link to="/" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">Home</Link>
+            <Link to="/AIPage" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">AI Test</Link>
             <Link to="/form" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">Form</Link>
           </div>
         </div>
@@ -34,7 +34,7 @@ function Home() {
           </p>
         </div>
         <Link
-          to="/form"
+          to="/welcome"
           className="px-10 py-4 text-3xl font-semibold bg-gradient-to-r from-gray-800 to-gray-700 text-white rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
         >
           BEGIN
@@ -49,8 +49,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/form" element={<FormComponent />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard:student" element={<Dashboard />} />
         <Route path="/welcome" element={<Welcome />} />
         <Route path = "/pathway" element = {<Pathway courses = {{"CS 242": "Michael Floeser", "Physics 102":"Walter Wolf", "Chemistry 303":"Peter Willis"}} />} />
         <Route path="/Course/:courseName" element={<Course/>} />
