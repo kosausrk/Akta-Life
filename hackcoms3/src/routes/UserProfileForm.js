@@ -83,10 +83,10 @@ export default function UserProfile({setYear, setMajor, setInterests, getCourses
 
             <div className="p-2"></div>
             <div>
-                <h1 className="text-xl text-stone-800">A little Biography</h1>
+                <h1 className="text-xl text-stone-800">More Interests</h1>
                 <textarea 
                 className="textarea textarea-primary w-full max-w-xs" 
-                placeholder="Bio"
+                placeholder="Start Typing"
                 onChange={(e) => setInterests(e.target.value)}
                 >
                 </textarea>

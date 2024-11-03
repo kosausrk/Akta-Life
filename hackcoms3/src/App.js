@@ -13,9 +13,14 @@ function Home() {
         <div className="container mx-auto flex justify-between items-center px-6">
           <div className="text-3xl font-semibold text-white tracking-wider">AKTA</div>
           <div>
+<<<<<<< HEAD
             <Link to="/" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">Home</Link>
             <Link to="/AIPage" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">AI Test</Link>
             <Link to="/form" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">Form</Link>
+=======
+            {/* <Link to="/" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">Home</Link>
+            <Link to="/form" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">Form</Link> */}
+>>>>>>> 289390f (Dashboard Improvements)
           </div>
         </div>
       </nav>
