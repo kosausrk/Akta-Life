@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
 import './App.css';
-import FormComponent from './routes/Form';
 import Dashboard from './routes/Dashboard';
 import Welcome from './routes/Welcome';
 
@@ -45,8 +44,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/form" element={<FormComponent />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/:student" element={<Dashboard />} />
         <Route path="/welcome" element={<Welcome />} />
       </Routes>
     </Router>

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Box from "../utils/box";
 import InstitutionForm from "./InstitutionForm";
 import UserProfile from "./UserProfileForm";
+import { useNavigate } from "react-router-dom";
 
 export default function Welcome() {
 
@@ -10,11 +11,20 @@ export default function Welcome() {
     const [getYear, setYear] = useState('')
     const [getMajor, setMajor] = useState('')
     const [getInterests, setInterests] = useState('')
+    const navigate = useNavigate()
     
     const handleCarouselClick = (e) => {
         if (getProgress === 3) {
             // navigate to the dashboard here with the user data
-            alert('Progress Complete')
+            
+            navigate('/dashboard', { 
+                state: {
+                    institution: getStudentInstitution,
+                    year: getYear,
+                    major: getMajor,
+                    bio: getInterests
+                }}
+            )
         }
         setProgress(getProgress + 1)
     }
