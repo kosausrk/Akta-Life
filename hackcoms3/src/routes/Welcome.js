@@ -23,7 +23,7 @@ export default function Welcome() {
                 courses: getCourses,
                 bio: getInterests
             }
-            navigate(`/dashboard/${JSON.stringify(res)}`)
+            navigate(`/dashboard/${btoa(JSON.stringify(res))}`)
         }
         setProgress(getProgress + 1)
     }
