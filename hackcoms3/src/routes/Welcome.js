@@ -1,13 +1,6 @@
 import { useState } from "react";
 import Box from "../utils/box";
 
-function UniversitySelect({u}) {
-    const li = u.map((school) => {<li key={school}><button>{school}</button></li>})
-    
-    return <>
-        <ul>{li}</ul>
-    </>
-}
 
 export default function Welcome() {
 

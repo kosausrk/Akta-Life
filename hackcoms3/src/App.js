@@ -4,9 +4,13 @@ import './App.css';
 import FormComponent from './routes/Form';
 import Dashboard from './routes/Dashboard';
 import Welcome from './routes/Welcome';
+import Pathway from './routes/Pathway';
+import Course from './routes/Course';
+
 
 
 function Home() {
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-300 flex flex-col">
       {/* Navbar */}
@@ -48,6 +52,8 @@ function App() {
         <Route path="/form" element={<FormComponent />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/welcome" element={<Welcome />} />
+        <Route path = "/pathway" element = {<Pathway courses = {{"CS 242": "Michael Floeser", "Physics 102":"Walter Wolf", "Chemistry 303":"Peter Willis"}} />} />
+        <Route path="/Course/:courseName" element={<Course/>} />
       </Routes>
     </Router>
   );
