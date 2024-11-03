@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
 import './App.css';
 import Complete from './routes/Complete';
+import AIComponent from './utils/AIComponent';
 
 function Modal({ message, onClose }) {
   return (
@@ -29,6 +30,7 @@ function Home() {
           <div className="text-3xl font-semibold text-white tracking-wider">AKTA</div>
           <div>
             <Link to="/" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">Home</Link>
+            <Link to="/AIPage" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">AI Test</Link>
             <Link to="/form" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">Form</Link>
           </div>
         </div>
@@ -270,6 +272,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/AIPage" element={<AIComponent />} />
         <Route path="/form" element={<FormComponent />} />
         <Route path="/complete"element={<Complete />} />
         <Route path="/dashboard" element={<Dashboard />} />
