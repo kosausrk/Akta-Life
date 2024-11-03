@@ -1,0 +1,65 @@
+{
+    "First Year": [
+      { "course_code": "CSCI-141", "course_name": "Computer Science I (General Education)", "credits": 4 },
+      { "course_code": "CSCI-142", "course_name": "Computer Science II (General Education)", "credits": 4 },
+      { "course_code": "MATH-181", "course_name": "Calculus I (General Education – Mathematical Perspective A)", "credits": 4 },
+      { "course_code": "MATH-182", "course_name": "Calculus II (General Education – Mathematical Perspective B)", "credits": 4 },
+      { "course_code": "MATH-190", "course_name": "Discrete Mathematics for Computing (General Education)", "credits": 3 },
+      { "course_code": "YOPS-10", "course_name": "RIT 365: RIT Connections", "credits": 0 },
+      { "course_code": "General Education – Ethical Perspective", "credits": 3 },
+      { "course_code": "General Education – Artistic Perspective", "credits": 3 },
+      { "course_code": "General Education – Global Perspective", "credits": 3 },
+      { "course_code": "General Education – Social Perspective", "credits": 3 },
+      { "course_code": "General Education – First-Year Writing (WI)", "credits": 3 }
+    ],
+    "Second Year": [
+      { "course_code": "CSCI-099", "course_name": "Undergraduate Cooperative Education Seminar", "credits": 0 },
+      { "course_code": "CSCI-243", "course_name": "The Mechanics of Programming", "credits": 3 },
+      { "course_code": "CSCI-488", "course_name": "Undergraduate Summer Co-op", "credits": 0 },
+      {
+        "choose_one": [
+          { "course_code": "CSCI-261", "course_name": "Analysis of Algorithms", "credits": 3 },
+          { "course_code": "CSCI-264", "course_name": "Honors Analysis of Algorithms", "credits": 3 }
+        ]
+      },
+      {
+        "choose_one": [
+          { "course_code": "CSCI-262", "course_name": "Introduction to Computer Science Theory", "credits": 3 },
+          { "course_code": "CSCI-263", "course_name": "Honors Introduction to Computer Science Theory", "credits": 3 }
+        ]
+      },
+      { "course_code": "MATH-241", "course_name": "Linear Algebra (General Education)", "credits": 3 },
+      { "course_code": "MATH-251", "course_name": "Probability and Statistics I (General Education)", "credits": 3 },
+      { "course_code": "SWEN-261", "course_name": "Introduction to Software Engineering", "credits": 3 },
+      { "course_code": "General Education – Natural Science Inquiry Perspective†", "credits": 4 },
+      { "course_code": "General Education – Scientific Principles Perspective", "credits": 3 },
+      { "course_code": "General Education – Elective†", "credits": 4 },
+      { "course_code": "General Education – Elective", "credits": 3 }
+    ],
+    "Third Year": [
+      { "course_code": "CSCI-250", "course_name": "Concepts of Computer Systems", "credits": 3 },
+      { "course_code": "CSCI-320", "course_name": "Principles of Data Management", "credits": 3 },
+      { "course_code": "CSCI-331", "course_name": "Introduction to Artificial Intelligence", "credits": 3 },
+      { "course_code": "CSCI-499", "course_name": "Computer Science Undergraduate Co-op (spring)", "credits": 0 },
+      { "course_code": "Open Elective", "credits": 3 },
+      { "course_code": "General Education – Immersion 1 (WI)", "credits": 3 }
+    ],
+    "Fourth Year": [
+      { "course_code": "CSCI-251", "course_name": "Concepts of Parallel and Distributed Systems", "credits": 3 },
+      { "course_code": "CSCI-344", "course_name": "Programming Language Concepts", "credits": 3 },
+      { "course_code": "CSCI-472", "course_name": "Historical & Current Perspectives in Computer Science (WI-PR)", "credits": 3 },
+      { "course_code": "Open Electives", "credits": 9 },
+      { "course_code": "CS Electives", "credits": 6 },
+      { "course_code": "CS Elective‡", "credits": 3 },
+      { "course_code": "General Education – Immersion 2", "credits": 3 }
+    ],
+    "Fifth Year": [
+      { "course_code": "CSCI-499", "course_name": "Computer Science Undergraduate Co-op (fall)", "credits": 0 },
+      { "course_code": "CS Elective‡", "credits": 3 },
+      { "course_code": "General Education – Immersion 3", "credits": 3 },
+      { "course_code": "General Education – Elective", "credits": 3 },
+      { "course_code": "Open Electives", "credits": 6 }
+    ],
+    "Total Semester Credit Hours": 126
+  }
+  

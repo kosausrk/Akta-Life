@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import './App.css';
 import Dashboard from './routes/Dashboard';
 import Welcome from './routes/Welcome';
+import AIComponent from './utils/AIComponent';
+
 
 
 function Home() {
@@ -14,8 +16,8 @@ function Home() {
           <div className="text-3xl font-semibold text-white tracking-wider">AKTA</div>
           <div>
             <Link to="/" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">Home</Link>
-            <Link to="/AIPage" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">AI Test</Link>
             <Link to="/form" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">Form</Link>
+            <Link to="/AIComponent" className="text-white hover:text-gray-300 px-4 transition-colors duration-300">AI Test</Link>
           </div>
         </div>
       </nav>
@@ -47,6 +49,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/dashboard:student" element={<Dashboard />} />
         <Route path="/welcome" element={<Welcome />} />
+        <Route path="/AIComponent" element={<AIComponent />} />
       </Routes>
     </Router>
   );

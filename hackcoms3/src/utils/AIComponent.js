@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Query from './ai.js'; // Adjust the path as needed
 
+
 function AIComponent() {
   const [response, setResponse] = useState('');
   const [loading, setLoading] = useState(false);
@@ -8,7 +9,9 @@ function AIComponent() {
   const handleButtonClick = async () => {
     const userInput = {
       major: 'Computer Science',
-      interests: ['AI', 'Machine Learning'], // Ensure this is always an array
+      courses: ['CSCI-141', 'CSCI-142-01', 'MATH-190', 'MATH-182,  CSCI-243'],
+      grade: 'Freshmen',
+      interests: ['Software Engineering'], // Ensure this is always an array
     };
 
     setLoading(true);
