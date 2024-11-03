@@ -31,12 +31,22 @@ export default async function Query(userInput) {
       
       Instructions:
       1. Identify the required courses for the user's year and major.
-      2. Display these required courses the user needs to take next and check that you dont put courses that the user has already taken by looking at the user input, sorted in descending order by the professor's rating. Format: "[Course Code] - Professor: [Name]".
-      3. Identify additional recommended courses based on the user's interests and major. Display them in a similar format.
+      2. Display these required courses the user needs to take next and check that you dont put courses that the user has already taken by looking at the user input, sorted in descending order by the professor's rating. Format: "[Course Code] - Professor: [Name] - Rating: [Rating]".
+      3. Identify additional recommended courses based on the user's interests and major. 
       
-      Return the recommended and required courses lists, formatted as specified like this for example:
+      please return 10 required and 10 reccommended courses thanks: Return the recommended and required courses lists, formatted as json like below, dont reutrn anything else just the data formatted for in the json
 
-      {"CS 242": "Michael Floeser", "Physics 102":"Walter Wolf", "Chemistry 303":"Peter Willis"}}
+      {
+  "Required Courses": [
+    { "course_code": "CSCI-331", "professor": "Reynold Bailey", "rating": 4.2 },
+    { "course_code": "CSCI-250", "professor": "Bruce Hartpence", "rating": 4.3 }
+  ],
+  "Recommended Courses": [
+    { "course_code": "CSCI-499", "professor": "Michael Mior", "rating": 5.0 },
+    { "course_code": "CSCI-431", "professor": "Alexander Ororbia", "rating": 4.5 }
+  ]
+}
+
     `;
 
     // Call the GPT API with the prompt

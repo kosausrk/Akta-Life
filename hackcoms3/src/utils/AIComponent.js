@@ -17,7 +17,7 @@ function AIComponent() {
     setLoading(true);
     try {
       const aiResponse = await Query(userInput);
-      console.log('AI Response:', aiResponse);
+      console.log(aiResponse);
       setResponse(aiResponse);
     } catch (error) {
       console.error('Error querying the AI:', error);
