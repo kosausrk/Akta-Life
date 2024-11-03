@@ -1,7 +1,7 @@
 import axios from 'axios';
 import courseData from './CoursesDataGCIS1.json'; // Ensure your JSON file path is correct
 
-const API_KEY = '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';
+const API_KEY = '';
 
 export default async function Query(userInput) {
   try {
