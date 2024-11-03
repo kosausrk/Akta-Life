@@ -22,6 +22,15 @@ export default function Dashboard() {
         interests: [studentMsg().bio]
         }).then((value) => setValue(value))}, [])
 
+
+    const track = () => {
+        return (
+            <>
+                {JSON.parse(getValue)}
+            </>
+        )
+    }
+
     return <>
         <Box prop={
             <div>
@@ -46,9 +55,13 @@ export default function Dashboard() {
                     <h1 className="text-lg text-stone-800"><b>Your Reccomended Courses</b></h1>
                 </div>
 
-                {getValue}
+                <button className="btn btn-primary" onClick={
+                    () => {
+                        console.log(JSON.parse(getValue))
+                    }
+                }>AI</button>{}
 
-
+                {track()}
             </div>
         } />
     </>
