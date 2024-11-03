@@ -14,7 +14,8 @@ function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-300 flex flex-col">
       {/* Navbar */}
-      <nav className="w-full py-4 bg-gradient-to-r from-gray-800 to-gray-600 shadow-lg">
+      <nav className="w-full py-4 bg-gradient-to-r from-teal-500 to-teal-700 shadow-lg">
+
         <div className="container mx-auto flex justify-between items-center px-6">
           <div className="text-3xl font-semibold text-white tracking-wider">AKTA</div>
           <div>
@@ -36,7 +37,7 @@ function Home() {
         </div>
         <Link
           to="/welcome"
-          className="px-10 py-4 text-3xl font-semibold bg-gradient-to-r from-gray-800 to-gray-700 text-white rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+          className="px-10 py-4 text-3xl font-semibold bg-gradient-to-r from-teal-500 to-teal-500 text-white rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
         >
           BEGIN
         </Link>
