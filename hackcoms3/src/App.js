@@ -49,7 +49,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/dashboard:student" element={<Dashboard />} />
+        <Route path="/dashboard/:student" element={<Dashboard />} />
         <Route path="/welcome" element={<Welcome />} />
         <Route path = "/pathway" element = {<Pathway courses = {{"CS 242": "Michael Floeser", "Physics 102":"Walter Wolf", "Chemistry 303":"Peter Willis"}} />} />
         <Route path="/Course/:courseName" element={<Course/>} />
