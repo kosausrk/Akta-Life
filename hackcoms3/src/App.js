@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
 import './App.css';
-import Complete from './routes/Complete';
 import FormComponent from './routes/Form';
+import Dashboard from './routes/Dashboard';
+import Welcome from './routes/Welcome';
 
 
 function Home() {
@@ -39,49 +40,14 @@ function Home() {
   );
 }
 
-function Dashboard() {
-
-  const location = useLocation();
-
-
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-300 p-6">
-      {console.log(location.studentData)}
-      <div className="container mx-auto bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-xl max-w-4xl">
-        <h2 className="text-4xl font-semibold mb-6 text-gray-800">Dashboard</h2>
-        
-        <div className="mb-8">
-          <h3 className="text-2xl font-semibold mb-4 text-gray-700">Required Courses</h3>
-          <select className="select select-bordered w-full border-gray-300 shadow-sm">
-            <option value="" disabled>Select a required course</option>
-            {/* Placeholder options */}
-            <option value="Course 1">Course 1</option>
-            <option value="Course 2">Course 2</option>
-          </select>
-        </div>
-
-        <div>
-          <h3 className="text-2xl font-semibold mb-4 text-gray-700">Recommended Courses</h3>
-          <select className="select select-bordered w-full border-gray-300 shadow-sm">
-            <option value="" disabled>Select a recommended course</option>
-            {/* Placeholder options */}
-            <option value="Course A">Course A</option>
-            <option value="Course B">Course B</option>
-          </select>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/form" element={<FormComponent />} />
-        <Route path="/complete"element={<Complete />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/welcome" element={<Welcome />} />
       </Routes>
     </Router>
   );
