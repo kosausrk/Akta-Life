@@ -2,7 +2,7 @@
 
 ## Check it out
 
-* [Devpost](https://devpost.com/software/urbanspark)
+* [Devpost](https://devpost.com/software/akta-life)
 
 ## Description
 
