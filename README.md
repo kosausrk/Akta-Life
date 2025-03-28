@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Akta.life - AI-Powered Personalized Course Hub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Check it out
 
-## Available Scripts
+* [Devpost](https://devpost.com/software/urbanspark)
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+Akta.life is an AI-driven platform designed to personalize course selection for students, especially those who are first-generation or non-traditional. It analyzes learning preferences, academic history, and career goals to provide tailored course and professor recommendations.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Key Features:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **AI-Powered Recommendations:** Personalized course and professor suggestions.
+* **Detailed Course Insights:** Information on course expectations, professor styles, and success rates.
+* **Accessibility:** Designed to cater to diverse learning backgrounds.
 
-### `npm test`
+* Built With: React, GPT-3.5-turbo, AI Recommendation Engine, RateMyProfessor Data
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Team
 
-### `npm run build`
+* Glenn Tatum - Front-end Development, UI/UX
+* Koushik Sarkar - AI Component, Data Scraping
+* Roman Slack - Developer Productivity, React Components
+* Wasi Hussain - RateMyProfessor Integration
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Inspiration
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Navigating college courses can be overwhelming. Akta.life aims to simplify this process by providing personalized guidance, empowering students to make informed decisions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Challenges
 
-### `npm run eject`
+* First-time hackathon challenges: task delegation, solidifying value proposition.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Accomplishments
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Developed an intuitive platform with high user satisfaction in beta testing.
+* Created a culturally meaningful brand.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## What We Learned
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Importance of guided support tools for student success.
+* The challenges of adjusting to college as freshman.
 
-## Learn More
+## Future Plans
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Expand to more institutions.
+* Integrate peer mentorship and academic support resources.
+* Enhance the recommendation engine with predictive analytics.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Submitted To
 
-### Code Splitting
+* HACK.COMS '24
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
