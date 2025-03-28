@@ -1,5 +1,11 @@
 # Akta.life - AI-Powered Personalized Course Hub
 
+## Preview: 
+
+![Akta Homepage](Akta-homepage.png)
+
+![Akta Selection](Akta-selection.png)
+
 ## Check it out
 
 * [Devpost](https://devpost.com/software/akta-life)
